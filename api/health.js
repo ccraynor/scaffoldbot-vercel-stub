@@ -1,5 +1,4 @@
-export default function handler(req, res) {
-  res
-    .status(200)
-    .json({ ok: true, service: "scaffoldbot-vercel-stub", ts: new Date().toISOString() });
-}
+// api/health.js
+module.exports = (req, res) => {
+  res.status(200).json({ status: 'ok', service: 'scaffoldbot-vercel-stub' });
+};
