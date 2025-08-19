@@ -1,27 +1,8 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs18.x"
     }
-  ],
-  "routes": [
-    {
-      "src": "/form",
-      "dest": "/api/form.js"
-    },
-    {
-      "src": "/doc",
-      "dest": "/api/doc.js"
-    },
-    {
-      "src": "/pdf",
-      "dest": "/api/pdf.js"
-    },
-    {
-      "src": "/health",
-      "dest": "/api/health.js"
-    }
-  ]
+  }
 }
