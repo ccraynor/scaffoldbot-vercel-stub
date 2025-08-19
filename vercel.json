@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "builds": [
+    { "src": "api/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/health", "dest": "/api/health.js" },
+    { "src": "/api/form",   "dest": "/api/form.js"   },
+    { "src": "/api/doc",    "dest": "/api/doc.js"    },
+    { "src": "/api/pdf",    "dest": "/api/pdf.js"    }
+  ]
 }
