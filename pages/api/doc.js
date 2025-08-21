@@ -10,7 +10,6 @@ const ALLOWED = [
   "Somali",
   "Marshallese",
 ];
-
 const ALLOWED_LOWER = new Map(ALLOWED.map(n => [n.toLowerCase(), n]));
 
 function sanitizeLanguages(input) {
@@ -44,7 +43,7 @@ export default function handler(req, res) {
   return res.status(200).json({
     ok: true,
     kind: "doc",
-    _handler: "sanitizer-v2", // visible marker to confirm correct code is live
+    _handler: "sanitizer-v2",
     family_note: {
       languages: final,
       ...(unknown.length ? { _meta: { dropped_unknown_languages: unknown } } : {})
