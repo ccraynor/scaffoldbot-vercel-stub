@@ -23,14 +23,12 @@ export default function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ ok:false, error:"Method Not Allowed", _handler: HANDLER });
   }
-
   const incoming = req.body?.family_note?.languages;
   const { final, unknown } = sanitizeLanguages(incoming);
-
   return res.status(200).json({
     ok: true,
     kind: "doc",
-    _handler: HANDLER,
+    _handler: "next-pages-sanitizer-v4",
     family_note: {
       languages: final,
       ...(unknown.length ? { _meta: { dropped_unknown_languages: unknown } } : {})
