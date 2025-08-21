@@ -26,6 +26,7 @@ export default function handler(req, res) {
 
   const incoming = req.body?.family_note?.languages;
   const { final, unknown } = sanitizeLanguages(incoming);
+
   return res.status(200).json({
     ok: true,
     kind: "doc",
