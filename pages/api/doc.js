@@ -1,38 +1,25 @@
-// pages/api/doc.js — sanitizer version (hardcoded allowed list)
-
 const ALLOWED = [
-  "English",
-  "Spanish",
-  "Chinese",
-  "Arabic",
-  "Vietnamese",
-  "Tagalog",
-  "Somali",
-  "Marshallese",
+  "English","Spanish","Chinese","Arabic","Vietnamese","Tagalog","Somali","Marshallese"
 ];
+const CANON = new Map(ALLOWED.map(n => [n.toLowerCase(), n]));
 
-const CANON = new Map(ALLOWED.map((L) => [L.toLowerCase(), L]));
-
-/** Returns { final, unknown } */
 function sanitizeLanguages(incoming) {
-  if (!Array.isArray(incoming) || incoming.length === 0) {
-    return { final: [...ALLOWED], unknown: [] };
-  }
   const final = [];
   const unknown = [];
-  for (const raw of incoming) {
-    const s = String(raw ?? "").trim();
-    if (!s) continue;
-    const canon = CANON.get(s.toLowerCase());
-    if (canon) {
-      if (!final.includes(canon)) final.push(canon);
-    } else {
-      unknown.push(s);
+
+  if (Array.isArray(incoming)) {
+    for (const raw of incoming) {
+      if (typeof raw !== "string") continue;
+      const key = raw.trim().toLowerCase();
+      const canonical = CANON.get(key);
+      if (canonical) {
+        if (!final.includes(canonical)) final.push(canonical);
+      } else {
+        unknown.push(raw);
+      }
     }
   }
-  if (final.length === 0) {
-    return { final: [...ALLOWED], unknown };
-  }
+  if (final.length === 0) return { final: [...ALLOWED], unknown };
   return { final, unknown };
 }
 
@@ -48,7 +35,7 @@ export default function handler(req, res) {
     kind: "doc",
     family_note: {
       languages: final,
-      ...(unknown.length ? { _meta: { dropped_unknown_languages: unknown } } : {}),
-    },
+      ...(unknown.length ? { _meta: { dropped_unknown_languages: unknown } } : {})
+    }
   });
 }
