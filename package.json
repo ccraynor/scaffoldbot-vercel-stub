@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vercel dev",
     "start": "node api/health.js",
-    "test": "jest"
+    "test": "jest",
+    "smoke": "bash scripts/smoke.sh"
   },
-  "dependencies": {},
   "devDependencies": {
     "jest": "^29.7.0"
   }
