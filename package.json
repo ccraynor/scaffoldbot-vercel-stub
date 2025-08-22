@@ -1,15 +1,7 @@
-{
-  "name": "scaffoldbot-vercel-stub",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vercel dev",
-    "start": "node api/health.js",
-    "test": "jest",
-    "smoke": "bash scripts/smoke.sh"
-  },
-  "devDependencies": {
-    "jest": "^29.7.0"
-  }
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start",
+  "test": "jest",
+  "smoke": "bash scripts/smoke.sh"
 }
