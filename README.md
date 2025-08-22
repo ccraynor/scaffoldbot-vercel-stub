@@ -19,3 +19,10 @@ Minimal serverless API for smoke-testing GPT Actions buttons.
 ## Local Dev
 - Install Vercel CLI: `npm i -g vercel`
 - Run: `vercel dev`
+
+
+```bash
+npm run dev
+BASE="http://localhost:3000/api" ./scripts/smoke.sh
+
+```
