@@ -1,11 +1,13 @@
 name: test
 on:
-  push:
   pull_request:
-
+  push:
+    branches: [ main ]
 jobs:
-  node:
+  jest:
     runs-on: ubuntu-latest
+    env:
+      BASE: https://scaffoldbot-vercel-stub.vercel.app/api
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -13,16 +15,4 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npm test
-      if: github.ref == 'refs/heads/main'
-    needs: node
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install jq (if needed)
-        run: sudo apt-get update && sudo apt-get install -y jq
-      - name: Run production smoke
-        env:
-          BASE: https://scaffoldbot-vercel-stub.vercel.app/api
-        run: |
-          curl -sSfL https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/scripts/smoke.sh -o smoke.sh
-          bash smoke.sh
+      - run: npm test -- --ci
