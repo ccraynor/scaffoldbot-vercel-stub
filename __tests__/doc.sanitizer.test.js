@@ -1,3 +1,4 @@
+jest.setTimeout(15000);
 const BASE = "https://scaffoldbot-vercel-stub.vercel.app/api";
 
 describe("doc sanitizer", () => {
