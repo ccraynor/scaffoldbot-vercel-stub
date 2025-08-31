@@ -10,6 +10,6 @@
     "smoke": "bash scripts/smoke.sh"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^30.1.1"
   }
 }
