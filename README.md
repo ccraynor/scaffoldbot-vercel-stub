@@ -26,3 +26,5 @@ npm run dev
 BASE="http://localhost:3000/api" ./scripts/smoke.sh
 
 ```
+
+<!-- seed: 2025-08-31T22:06:38Z -->
