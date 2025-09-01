@@ -28,3 +28,4 @@ BASE="http://localhost:3000/api" ./scripts/smoke.sh
 ```
 
 <!-- seed: 2025-08-31T22:06:38Z -->
+PR smoke: Mon Sep  1 17:08:12 CDT 2025
