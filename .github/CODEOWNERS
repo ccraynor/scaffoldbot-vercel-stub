@@ -1,3 +1,6 @@
+# Default: every change needs Carrie
 *           @ccraynor
-pages/**    @frontend-team
-api/**      @platform-team
+
+# Uncomment only if these teams exist in your org and have repo access
+# pages/**    @frontend-team
+# api/**      @platform-team
