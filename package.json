@@ -1,15 +1,16 @@
 {
   "name": "scaffoldbot-vercel-stub",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "start": "node api/health.js",
-    "test": "jest",
-    "smoke": "bash scripts/smoke.sh"
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
-    "jest": "^30.1.1"
-  }
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
 }
