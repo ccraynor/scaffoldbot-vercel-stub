@@ -8,13 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^15.5.2",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "next": "15.5.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "engines": {
-    "node": "22.x",
-    "npm": "11.x"
+    "node": "22.x"
   },
   "packageManager": "npm@11"
 }
