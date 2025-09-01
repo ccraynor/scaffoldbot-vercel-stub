@@ -31,3 +31,4 @@ BASE="http://localhost:3000/api" ./scripts/smoke.sh
 <!-- chore: tiny PR to exercise checks -->
 <!-- tiny PR seed -->
 <!-- tiny PR seed -->
+<!-- seed -->
