@@ -1,11 +1,11 @@
-name: CI
+name: ci
 on:
   pull_request:
     branches: [main]
   workflow_dispatch:
 jobs:
   test:
-    name: test
+    name: test / jest
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
