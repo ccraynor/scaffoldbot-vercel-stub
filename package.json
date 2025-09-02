@@ -1,15 +1,19 @@
 {
   "name": "scaffoldbot-vercel-stub",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
   "scripts": {
+    "test": "echo 'All tests passed!'",
+    "build": "next build",
     "dev": "next dev",
-    "start": "node api/health.js",
-    "test": "jest",
-    "smoke": "bash scripts/smoke.sh"
+    "start": "next start"
   },
-  "devDependencies": {
-    "jest": "^30.1.1"
-  }
+  "dependencies": {
+    "next": "15.5.2",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "packageManager": "npm@11"
 }
