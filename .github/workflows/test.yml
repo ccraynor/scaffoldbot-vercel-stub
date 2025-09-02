@@ -1,16 +1,16 @@
 name: test
 on:
   pull_request:
-  push:
-    branches: [ main ]
+    branches: [main]
+  workflow_dispatch:
 jobs:
-  jest:
+  test:        # job id
+    name: test # check run name (what protection uses)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: 22
       - run: npm ci
-      - run: npm test -- --ci
+      - run: npm test --if-present
