@@ -1,0 +1,741 @@
+---
+block_name: release_notes_universal
+module_id: UNIVERSAL-Notes-2025-08-14
+description: 'Quick wins patch: KPI overrides, state funding crosswalks, dashboard pointers, CI re-validated.'
+changes:
+- Added kpi_overrides_universal with env.overrides thresholds (ENG-01, SEL-CHK, MAST-01).
+- Added notes.funding_alignment_state for TX/CA/NY/FL/IL in Data, Student Agency, Authentic Learning.
+- Added dashboards pointers to Student Agency and Authentic Learning.
+- 'Re-validated structure: no duplicate keys; reuse references resolve or are approved externals.'
+notes:
+  funding_alignment_state:
+    TX:
+      - Data
+      - Student Agency
+      - Authentic Learning
+    CA:
+      - Data
+      - Student Agency
+      - Authentic Learning
+    NY:
+      - Data
+      - Student Agency
+      - Authentic Learning
+    FL:
+      - Data
+      - Student Agency
+      - Authentic Learning
+    IL:
+      - Data
+      - Student Agency
+      - Authentic Learning
+components:
+- Inherited from KPI-Core (Overrides/Thresholds)
+- Inherited from UDL-Core (Dashboards)
+instructional_features:
+- Leverages KPI-Core instructional features
+- Leverages UDL-Core instructional features
+---
+block_name: virtual_participation_scaffolds
+depends_on:
+- FDBK-Core-v1
+usage_scope: universal
+description: 'Boosts virtual engagement with scaffolded discussions, asynchronous tools, multimodal inputs, and peer interaction routines. Delegates gallery-walk feedback templates and peer critique to FDBK-Core-v1.'
+reuse:
+  feedback_components: FDBK-Feedback-Pack-v1
+  peer_review_protocols: FDBK-Peer-Review-v1
+features:
+- asynchronous_discussion_prompts
+- multimodal_response_options (text/audio/video)
+- gallery_walk_templates
+- peer_critique_protocols
+- participation_reflection_stems
+strategies:
+- Provide sentence frames for online discourse.
+- Offer multimodal choice to lower language barriers.
+- Use structured peer critique with clear rubrics.
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+- EFCoachBot
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages FDBK-Core instructional features
+---
+block_name: interdisciplinary_activity_templates
+usage_scope: shared
+description: 'Provides creative interdisciplinary activity formats that blend history, math, science, and literacy.'
+features:
+- bias_recognition_simulations
+- historical_pen_pal_prompts
+- math_physics_gym_tasks
+- incentive_simulation_cards
+- field_study_unit_templates
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+research_sources:
+- Prodigy Game (2024). Interdisciplinary Teaching Activities.
+components:
+- Inherited from UDL-Core (Representation/Engagement)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: historical_thinking_skills_scaffolds
+usage_scope: shared
+description: 'Scaffolds historical thinking through empathy, sourcing, and chronological reasoning activities.'
+features:
+- progressive_era_scavenger_hunt
+- historical_dinner_party_simulations
+- illustrated_pov_timelines
+- spicy_soaps_analysis_templates
+applicable_agents:
+- QuizCraftGPT
+- LessonCrafter
+- ScaffoldBot
+research_sources:
+- History for Humans (2024). Teaching Historical Thinking Skills.
+components:
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: ai_social_studies_enhancement
+depends_on:
+- UDL-Core-v1
+- FDBK-Core-v1
+- EIC-Core-v1
+usage_scope: universal
+description: 'Enhances social studies instruction with AI-powered tools for analysis, simulation, civic discourse, and adaptive scaffolds.'
+features:
+- interactive_simulation_templates (civic decision-making, economic trade-offs)
+- ai_primary_source_analysis with guided questioning
+- adaptive_instruction_flags for struggling learners
+- collaborative_civic_discussion_tools (structured debate, town hall)
+- perspective-taking prompts and empathy maps
+strategies:
+- Use AI to generate varied primary source perspectives.
+- Scaffold civic discussions with clear norms and sentence frames.
+- Provide adaptive prompts for students needing extra support.
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+- QuizCraftGPT
+research_sources:
+- eSchool News (2024). Digital Tools and AI in Social Studies.
+- National Council for the Social Studies (2023). Guidance on Technology Integration.
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+- Leverages EIC-Core instructional features
+---
+block_name: causal_reasoning_scaffold
+description: Scaffolds historical and scientific causation using multi-factor analysis and causal mapping tools.
+features:
+- causal_map_generator
+- short_intermediate_long_term_cause_sorter
+- consequence_linking_prompts
+- claim_testing_tool
+- recipe_for_revolution template
+research_sources:
+- OER Project - Teaching Historical Causation
+- Stanford History Education Group (SHEG) (2023). Historical Thinking Skills.
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- QuizCraftGPT
+usage_scope: universal
+depends_on:
+- FDBK-Core-v1
+- UDL-Core-v1
+reuse: {}
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+---
+block_name: creative_comparison_framework
+description: Enables student-driven historical comparison using flexible criteria and scale-switching techniques.
+features:
+- student_choice_comparison_criteria
+- scale_zoom_in_out_prompts
+- comparative_thesis_builder
+- origin_story_comparison templates
+- belief_systems contrast scaffolds
+research_sources:
+- OER Project - Creative Comparison
+- Wineburg, S. (2001). Historical Thinking and Other Unnatural Acts.
+- Nokes, J. D. (2010). Building students' historical literacies.
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+usage_scope: universal
+depends_on:
+- FDBK-Core-v1
+- UDL-Core-v1
+reuse: {}
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+---
+block_name: debate_framework
+depends_on:
+- FDBK-Core-v1
+usage_scope: universal
+description: 'Scaffolds debate across subjects (science, civic reasoning) with pedagogy, judging criteria, transparency, and revision of cases to the Feedback Core (FDBK-Core-v1).'
+reuse:
+  peer_review_protocols: FDBK-Peer-Review-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+---
+block_name: universal_differentiation_module
+depends_on:
+- GSR-Core-v1
+- UDL-Core-v1
+- EIC-Core-v1
+- FDBK-Core-v1
+usage_scope: universal
+description: 'Research-aligned differentiation scaffolds for UDL, EF, DI, and MTSS integration.'
+reuse:
+  feedback_components: FDBK-Feedback-Pack-v1
+  equity_framework: EIC-Equity-Framework-v1
+  physical_sensory: EIC-Physical-Sensory-v1
+  at_integration: EIC-AT-Integration-v1
+  developmental_disability_support: EIC-Dev-Disability-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+modules:
+- leveled_prompt_generator
+- sentence_stem_scaffolder
+- visual_support_toggle
+- chunking_and_simplification
+features:
+  feedback_to_self_efficacy_link: true
+  emotional_safety_prompts: true
+  peer_interaction_scaffold: true
+flags:
+  science_of_reading_alignment: true
+output_types:
+- scaffolded_prompt_table
+- visual anchor cards
+- leveled text variants
+- EF reflection stems
+- SEL-infused scaffolds
+integration_paths:
+- LessonCrafter → ScaffoldBot
+- EFCoachBot → ScaffoldBot
+- PromptPolishGPT → ScaffoldBot
+- QuizCraftGPT → ScaffoldBot
+target_audiences:
+- SPED
+- ELL
+- EF/ADHD
+- Inclusion Specialists
+- General Ed Teachers
+platform_tags:
+- printable
+components:
+- Inherited from GSR-Core (Goal-Setting/Reflection/Progress Monitoring)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/Executive Function)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages GSR-Core instructional features
+- Leverages UDL-Core instructional features
+- Leverages EIC-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: authentic_learning_and_real_world_tasks
+usage_scope:
+- project_based_learning
+- community_engagement
+- career_readiness
+description: 'Promote relevance, engagement, and transfer through authentic tasks.'
+features:
+- Real-world scenario templates
+- Role-play and persona-based assignments
+- Community action project scaffolds
+- Reflection prompts tied to lived experience
+strategies:
+- Use of lived experience in assignments
+- Persona-based journaling
+- Local issue-based inquiry tasks
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- EFCoachBot
+research_sources:
+- Ingerham (2012)
+- So & Bonk (2010)
+- Salmon (2013)
+- Darling-Hammond et al. (2020)
+- Thomas (2021)
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+- Leverages EIC-Core instructional features
+---
+block_name: math_learning_and_support_suite
+depends_on:
+- UDL-Core-v1
+- FDBK-Core-v1
+- EIC-Core-v1
+reuse:
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+  synthesis_scaffolds: FDBK-Summative-Synthesis-v1
+  representation: UDL-Representation-v1
+  action_expression: UDL-Action-Expression-v1
+  engagement: UDL-Engagement-v1
+  cognitive_supports: UDL-Cognitive-EF-v1
+usage_scope: universal
+description: 'Unifies collaboration, accessibility, emotional regulation, self-efficacy, and pacing supports for math learning.'
+submodules:
+  feedback_and_precision:
+    description: 'Builds math accuracy and confidence through scaffolded problem solving and worked examples.'
+    features:
+      adaptive_feedback_enabled: true
+      immediate_feedback_toggle: true
+      personalized_math_feedback: true
+      low_ability_support_mode: true
+      scaffolded_problem_solving: true
+      visual_math_support: true
+  collaboration_and_social_presence:
+    description: 'Supports collaborative math learning and peer interaction.'
+    features:
+      math_expression_support: true
+      synchronous_whiteboard_enabled: true
+      peer_interaction_scaffolds: true
+      group_project_templates: true
+      blog_and_wiki_integration: true
+      emotional_safety_in_math: true
+  emotional_regulation_and_self_efficacy:
+    description: 'Builds resilience and motivation by addressing frustration, anxiety, and prior failure in math.'
+    features:
+      SEL_aligned_math_reflection: true
+      anger_prediction_support: true
+      frustration_mitigation_prompts: true
+      success_tracking_prompts: true
+      prior_failure_recovery_support: true
+  accessibility_and_tool_support:
+    description: 'Ensures accessibility and inclusivity in math technology tools and content delivery.'
+    features:
+      alt_tag_guidance_for_math_images: true
+      math_symbol_accessibility: true
+      blog_and_whiteboard_tool_alignment: true
+      device_input_support: true
+  pacing_and_autonomy:
+    description: 'Supports learner independence and flexible pacing in math learning environments.'
+    features:
+      self_pacing_toggle: true
+      pacing_reflection_prompts: true
+      autonomy_support: true
+integration_paths:
+- LessonCrafter → ScaffoldBot
+- EFCoachBot → ScaffoldBot
+- PromptPolishGPT → ScaffoldBot
+- QuizCraftGPT → ScaffoldBot
+components:
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+- Leverages EIC-Core instructional features
+---
+block_name: science_of_reading_writing_alignment
+depends_on:
+- FDBK-Core-v1
+- UDL-Core-v1
+- EIC-Core-v1
+reuse:
+  peer_review_protocols: FDBK-Peer-Review-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+  synthesis_scaffolds: FDBK-Summative-Synthesis-v1
+usage_scope: shared
+description: 'Aligns writing instruction with Science of Reading principles (phonics, phonemic awareness, decoding, text structure).'
+features:
+- systematic_phonics_instruction
+- phonemic_awareness_in_writing
+- decoding_and_encoding_tasks
+- genre_structure_modeling
+- reading_to_write_strategies
+- sentence_level_scaffolds
+- text_structure_explicitness
+- citation_scaffold
+- source_synthesis_support
+- thesis_template_enabled
+- genre_structure_templates
+- transition_word_scaffolds
+strategies:
+- Explicitly connect decoding to encoding tasks.
+- Model genre structures with mentor texts.
+- Provide sentence-level scaffolds for emerging writers.
+- Use small group supports for differentiated instruction.
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- EFCoachBot
+tags:
+- literacy
+- phonics
+- writing_alignment
+- reading_to_write
+research_sources:
+- Voyager Sopris Learning (2024)
+- Reading Rockets (2024)
+- SRSD Online (2024)
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+- Leverages EIC-Core instructional features
+---
+block_name: strategic_writing_development
+depends_on:
+- GSR-Core-v1
+- FDBK-Core-v1
+usage_scope: universal
+description: 'SRSD-aligned writing scaffold (planning, organizing, revising, genre mastery) with motivation/self-efficacy supports.'
+reuse:
+  goal_prompts: GSR-Prompts-v1
+  checkpoint_form: GSR-Form-Check-1
+  reflection_rubric: GSR-Reflect-1
+  dashboard_schema: GSR-DB-1
+  feedback_components: FDBK-Feedback-Pack-v1
+  peer_review_protocols: FDBK-Peer-Review-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+features:
+- genre_specific_strategy_prompts
+- metacognitive_scaffolds
+- motivation_self_efficacy_boosters
+- recursive_writing_process_support
+srsd_framework:
+phases:
+- planning
+- organizing
+- revising
+- genre_mastery
+strategy_prompts:
+planning:
+- Activate prior knowledge
+- Brainstorm and plan with success criteria
+organizing:
+- Use graphic organizers; align structure to genre moves
+revising:
+- Apply targeted edits guided by rubric cues
+genre_mastery:
+- Apply genre conventions and mentor-text insights
+- Prepare summative synthesis pieces
+components:
+- Inherited from GSR-Core (Goal-Setting/Reflection/Progress Monitoring)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages GSR-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: primary_source_inquiry_framework
+depends_on:
+- FDBK-Core-v1
+- UDL-Core-v1
+- EIC-Core-v1
+reuse:
+  feedback_components: FDBK-Feedback-Pack-v1
+  peer_review_protocols: FDBK-Peer-Review-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+  synthesis_scaffolds: FDBK-Summative-Synthesis-v1
+  physical_sensory: EIC-Physical-Sensory-v1
+usage_scope: universal
+description: 'Scaffolds historical and disciplinary inquiry through the use of primary sources.'
+features:
+  source_analysis_checklists: true
+  contextualization_prompts: true
+  sourcing_questions_bank: true
+  corroboration_activity_templates: true
+  inquiry_question_starters: true
+  historiography_prompts: true
+  disciplinary_writing_frames: true
+strategies:
+  inquiry_process:
+  - Begin with sourcing and context framing.
+  - Use corroboration and close reading for evidence gathering.
+  - Support discipline-specific writing moves with exemplars.
+  assessment_and_feedback:
+  - Provide clear rubric criteria early.
+  - Apply self-checklists before submission.
+  synthesis_and_revision:
+  - Prompt integration of multiple sources into coherent arguments.
+  - Use iterative drafts with targeted revision plans.
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+- EFCoachBot
+tags:
+- inquiry_learning
+- primary_sources
+- disciplinary_literacy
+- historical_thinking
+- feedback_linked
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+- Leverages EIC-Core instructional features
+---
+block_name: ai_writing_annotation_and_revision_scaffold
+depends_on:
+- FDBK-Core-v1
+- UDL-Core-v1
+- EIC-Core-v1
+reuse:
+  feedback_components: FDBK-Feedback-Pack-v1
+  peer_review_protocols: FDBK-Peer-Review-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+  physical_sensory: EIC-Physical-Sensory-v1
+usage_scope: universal
+description: 'Scaffolds metalinguistic awareness, genre structure, and high-quality annotation for AI- or student-authored texts.'
+features:
+  genre_specific_structure_prompts: true
+  coherence_checklists: true
+  idea_development_scaffolds: true
+  dialogic_feedback_support: true
+  specificity_complexity_checklists: true
+  metalinguistic_awareness_prompts: true
+strategies:
+  annotation:
+  - Use sentence starters and focus questions.
+  - Highlight specificity and complexity; tag patterns, claims, and support.
+  - Apply dialogic feedback routines.
+  revision:
+  - Iterate using core revision stages.
+  - Align edits to transparent rubrics and self checks.
+  metalinguistic_awareness:
+  - Reflect on tone, register, audience, and cohesion.
+  - Critique AI outputs for logic gaps, bias, and unsupported claims.
+applicable_agents:
+- PromptPolishGPT
+- EFCoachBot
+- LessonCrafter
+tags:
+- writing
+- annotation
+- peer_feedback_linked
+- revision_cycle_linked
+- rubrics_transparency_linked
+- metalinguistic_awareness
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+- Leverages EIC-Core instructional features
+---
+block_name: instructional_coherence_alignment
+usage_scope: universal
+description: Aligns core instruction, intervention, and assessment systems to reinforce grade-level learning and student experience coherence.
+features:
+  core_intervention_alignment_check: true
+  student_experience_mapping: true
+  common_framework_reference: true
+  coherence_diagnostic_tool: true
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+- QuizCraftGPT
+- EFCoachBot
+research_sources:
+- TNTP (2023). Instructional Coherence Framework
+depends_on: []
+reuse: {}
+components:
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: tween_differentiation_support
+usage_scope: universal
+description: Supports differentiation for middle grade learners with empathy-based scaffolds, flexible grouping, and growth-focused feedback.
+features:
+  growth_focus_enabled: true
+  empathy_based_scaffolds: true
+  flexible_grouping_support: true
+  positive_intent_prompts: true
+  student_emotional_safety_check: true
+applicable_agents:
+- EFCoachBot
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+research_sources:
+- ASCD (2023). Differentiating for Tweens
+depends_on: []
+reuse: {}
+components:
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: interdisciplinary_portfolio_scaffolds
+depends_on:
+- FDBK-Core-v1
+- UDL-Core-v1
+- EIC-Core-v1
+reuse:
+  peer_review_protocols: FDBK-Peer-Review-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+  synthesis_scaffolds: FDBK-Summative-Synthesis-v1
+  equity_framework: EIC-Equity-Framework-v1
+usage_scope: shared
+description: 'Supports interdisciplinary project-based learning through portfolios, horizontal history connections, and iterative improvement.'
+features:
+  cross_subject_rubric_templates: true
+  horizontal_history_prompts: true
+  student_archiving_templates: true
+applicable_agents:
+- LessonCrafter
+- PromptPolishGPT
+- QuizCraftGPT
+research_sources:
+- Edutopia (2023)
+- Darling-Hammond, 2020. Performance Assessment
+- Barron & Darling-Hammond (2008)
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: curricular_integration_scaffolds
+usage_scope: shared
+description: Supports intradisciplinary, interdisciplinary, and transdisciplinary learning connections.
+features:
+- intradisciplinary_alignment
+- interdisciplinary_theme_support
+- transdisciplinary_project_templates
+- cross_subject_rubric_templates
+- student_archiving_templates
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+research_sources:
+- Manitoba Education (2020). Curricular Connections Framework.
+- Drake & Reid (2020)
+- Jacobs (1989). Transdisciplinary Learning.
+depends_on: []
+reuse: {}
+components:
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: hands_on_learning_support
+usage_scope: shared
+description: Scaffolds experiential, multisensory, and performance-based learning tasks.
+features:
+- project_based_learning_templates
+- multisensory_task_design
+- performance_assessment_rubrics
+- reflection_prompts_for_creation
+- tactile_learning_support
+applicable_agents:
+- ScaffoldBot
+- LessonCrafter
+- QuizCraftGPT
+research_sources:
+- Structural Learning (2023). Hands-On Learning Framework.
+depends_on: []
+reuse: {}
+components:
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+instructional_features:
+- Leverages UDL-Core instructional features
+- Leverages FDBK-Core instructional features
+---
+block_name: authentic_learning_alignment
+depends_on:
+- FDBK-Core-v1
+- UDL-Core-v1
+- EIC-Core-v1
+reuse:
+  feedback_components: FDBK-Feedback-Pack-v1
+  peer_review_protocols: FDBK-Peer-Review-v1
+  rubric_transparency: FDBK-Rubric-Transparency-v1
+  revision_cycle: FDBK-Revision-Cycle-v1
+  synthesis_scaffolds: FDBK-Summative-Synthesis-v1
+usage_scope: universal
+description: 'Aligns tasks, projects, and assessments with real-world contexts and authentic audiences.'
+features:
+  real_world_audience_integration: true
+  discipline_standards_alignment: true
+  authentic_product_formats: true
+applicable_agents:
+- LessonCrafter
+- ScaffoldBot
+- PromptPolishGPT
+- EFCoachBot
+tags:
+- authentic_learning
+- real_world_alignment
+- authentic_products
+- discipline_standards
+components:
+- Inherited from FDBK-Core (Feedback/Peer Review/Rubrics/Revision)
+- Inherited from UDL-Core (Representation/Action-Expression/Engagement/EF)
+- Inherited from EIC-Core (Equity/Accommodations/Assistive Technology)
+instructional_features:
+- Leverages FDBK-Core instructional features
+- Leverages UDL-Core instructional features
+- Leverages EIC-Core instructional features
