@@ -6,6 +6,8 @@ on:
 jobs:
   jest:
     runs-on: ubuntu-latest
+    env:
+      BASE: https://scaffoldbot-vercel-stub.vercel.app/api
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
