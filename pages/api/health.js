@@ -1,3 +1,3 @@
 export default function handler(req, res) {
-  res.status(200).json({ status: 'ok', service: 'scaffoldbot-vercel-stub' });
+  res.status(200).json({ ok: true });
 }
