@@ -1,8 +1,10 @@
 name: smoke
 on:
   pull_request:
-  push:
-    branches: [ main ]
+  push: { branches: [ main ] }
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   smoke:
     runs-on: ubuntu-latest
@@ -11,6 +13,5 @@ jobs:
       - name: Install jq
         run: sudo apt-get update && sudo apt-get install -y jq
       - name: Run smoke against prod
-        env:
-          BASE: https://scaffoldbot-vercel-stub.vercel.app/api
+        env: { BASE: https://scaffoldbot-vercel-stub.vercel.app/api }
         run: bash scripts/smoke.sh
