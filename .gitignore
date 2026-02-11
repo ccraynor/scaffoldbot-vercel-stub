@@ -5,3 +5,7 @@ node_modules/
 .next/
 
 *.bak
+.next/
+*.bak
+.next/
+*.bak

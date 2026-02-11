@@ -1,2 +1,6 @@
-# Everything in the repo requires review from this user
-* @ccraynor
+# Default: every change needs Carrie
+*           @ccraynor
+
+# Uncomment only if these teams exist in your org and have repo access
+# pages/**    @frontend-team
+# api/**      @platform-team

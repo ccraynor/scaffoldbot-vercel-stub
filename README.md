@@ -28,3 +28,7 @@ BASE="http://localhost:3000/api" ./scripts/smoke.sh
 ```
 
 <!-- seed: 2025-08-31T22:06:38Z -->
+<!-- chore: tiny PR to exercise checks -->
+<!-- tiny PR seed -->
+<!-- tiny PR seed -->
+<!-- seed -->
