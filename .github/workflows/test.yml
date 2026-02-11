@@ -13,4 +13,7 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
-      - run: npm test -- --ci
+      - name: Run tests
+        env:
+          BASE: https://scaffoldbot-vercel-stub.vercel.app/api
+        run: npm test -- --ci
